@@ -1,0 +1,6 @@
+.product__add {
+  margin: 1rem 0;
+
+  display: flex;
+  justify-content: end;
+}
