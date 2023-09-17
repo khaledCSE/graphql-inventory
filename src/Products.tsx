@@ -71,7 +71,6 @@ export function Products(): JSX.Element {
     stock: product?.stock
   })) ?? []
 
-  const handleModalOk = () => { }
   const handleModalCancel = () => {
     setIsModalOpen(false)
   }
@@ -96,7 +95,7 @@ export function Products(): JSX.Element {
       </div>
       <Table columns={columns} dataSource={rows} style={{ marginTop: '1rem' }} />
 
-      <AddProductModal open={isModalOpen} handleOk={handleModalOk} handleCancel={handleModalCancel} />
+      <AddProductModal open={isModalOpen} handleCancel={handleModalCancel} />
     </div>
   );
 }

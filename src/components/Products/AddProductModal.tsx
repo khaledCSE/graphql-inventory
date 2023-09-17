@@ -4,7 +4,6 @@ import { FC, useRef } from "react"
 
 interface IProps {
   open: boolean
-  handleOk: () => void
   handleCancel: () => void
 }
 
@@ -29,7 +28,7 @@ const ADD_PRODUCT = gql`
 `;
 
 const AddProductModal: FC<IProps> = (props) => {
-  const { open, handleOk, handleCancel } = props
+  const { open, handleCancel } = props
   const submitBtn = useRef<HTMLButtonElement | null>(null)
 
   const [addProduct] = useMutation(ADD_PRODUCT, {
